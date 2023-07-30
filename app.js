@@ -16,9 +16,9 @@ app.use((req, res, next) => {
   });
 
   
-  app.use((req, res) => {
-    res.json({ message: "BANDOUR !" }); 
- });
+//   app.use((req, res) => {
+//     res.json({ message: "BANDOUR !" }); 
+//  });
 
  
 app.use("/users", users);
