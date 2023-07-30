@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
  
   app.use((req, res) => {
-    res.json(users.user); 
+    res.json(users); 
  });
 
 module.exports = app;
