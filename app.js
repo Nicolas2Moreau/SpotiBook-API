@@ -17,13 +17,13 @@ app.use((req, res, next) => {
   });
 
   
-  app.use((req, res) => {
-    res.json({ message: "BANDOUR FROM vercel routes!" }); 
- });
+//   app.use((req, res) => {
+//     res.json({ message: "BANDOUR FROM vercel routes!" }); 
+//  });
 
  
-// router.get("/", async (req, res) => {
-//   res.json(users); 
-// });
+router.get("/", async (req, res) => {
+  res.json(users); 
+});
 
 module.exports = app;
