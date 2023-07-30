@@ -1,4 +1,5 @@
 import users from "./routes/users.js";
+const router = express.Router();
 
 const express = require('express');
 
@@ -21,8 +22,8 @@ app.use((req, res, next) => {
 //  });
 
  
-  app.use((req, res) => {
-    res.json(users); 
- });
+router.get("/", async (req, res) => {
+  res.json(users); 
+});
 
 module.exports = app;
