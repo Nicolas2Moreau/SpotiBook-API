@@ -1,3 +1,5 @@
+import users from "./routes/users.js";
+
 const express = require('express');
 
 const app = express();
@@ -17,5 +19,8 @@ app.use((req, res, next) => {
   app.use((req, res) => {
     res.json({ message: "BANDOUR !" }); 
  });
+
+ 
+app.use("/users", users);
 
 module.exports = app;
