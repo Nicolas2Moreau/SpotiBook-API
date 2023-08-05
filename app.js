@@ -22,15 +22,15 @@ app.use((req, res, next) => {
 //  });
 
  
-router.get("/", async (req, res) => {
-  res.json(users); 
-});
+// router.get("/", async (req, res) => {
+//   res.json(users); 
+// });
 
 const users = require('./routes/users');
 
 
 
-router.get('/', (req, res) => {
+router.get('/', async(req, res) => {
   res.json({
     message: 'API - 👋🌎🌍🌏',
   });
@@ -38,4 +38,5 @@ router.get('/', (req, res) => {
 
 router.use('/users', users);
 module.exports = app;
+
 
