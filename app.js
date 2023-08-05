@@ -1,5 +1,5 @@
 // import users from "./routes/users.js";
-const router = express.Router();
+// const router = express.Router();
 
 const express = require('express');
 
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 //   res.json(users); 
 // });
 
-const users = require('./routes/users.js');
+// const users = require('./routes/users.js');
 
 
 
@@ -36,7 +36,7 @@ const users = require('./routes/users.js');
 //   });
 // });
 
-router.use('/users', users);
+// router.use('/users', users);
 module.exports = app;
 
 
