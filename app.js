@@ -26,4 +26,16 @@ router.get("/", async (req, res) => {
   res.json(users); 
 });
 
+const users = require('./routes/users');
+
+
+
+router.get('/', (req, res) => {
+  res.json({
+    message: 'API - 👋🌎🌍🌏',
+  });
+});
+
+router.use('/users', users);
 module.exports = app;
+
