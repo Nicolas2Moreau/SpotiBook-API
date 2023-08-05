@@ -2,7 +2,8 @@
 // const router = express.Router();
 
 const express = require('express');
-
+// router.use('/users', this.routes);
+const api = require('./routes');
 const app = express();
 
 //////////////////////////////////
@@ -17,11 +18,17 @@ app.use((req, res, next) => {
   });
 
   
-  app.use((req, res) => {
-    res.json({ message: "BANDOUR FROM vercel routes!" }); 
- });
+//   app.use((req, res) => {
+//     res.json({ message: "BANDOUR FROM vercel routes!" }); 
+//  });
 
  
+app.get('/', (req, res) => {
+  res.json({
+    message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄',
+  });
+});
+app.use('/api/v1', api);
 // router.get("/", async (req, res) => {
 //   res.json(users); 
 // });
@@ -36,7 +43,7 @@ app.use((req, res, next) => {
 //   });
 // });
 
-// router.use('/users', users);
+
 module.exports = app;
 
 
