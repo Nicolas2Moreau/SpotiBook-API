@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   res.json(['😀','user2', '😳', '🙄']);
 });
 router.get('/test', (req,res) => {
-  res.render("bouh",{user:"sketuveu",user2:"sketuveudeux"});
+  res.render("bouh",{user:"sketuveu"});
 });
 router.get('/0', (req, res) => {
   res.json(['route0']);
