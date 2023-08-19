@@ -4,7 +4,10 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.json({'😀','user2', '😳', '🙄'});
+  res.json(['😀','user2', '😳', '🙄']);
+});
+router.get('/test', (req) => {
+  return {'😀','user2', '😳', '🙄'};
 });
 router.get('/0', (req, res) => {
   res.json(['route0']);
