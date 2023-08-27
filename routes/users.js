@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   res.json(['😀','user2', '😳', '🙄']);
 });
 router.get('/user', (req, res) => {
-    res.json(bdd.users[1]);
+    res.json(bdd.users[1].nom);
   });
 router
   .route("/:id")
