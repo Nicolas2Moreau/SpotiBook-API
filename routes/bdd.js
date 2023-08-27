@@ -1,4 +1,4 @@
-{
+const bdd =  {
   "users": [{
     "id": 1,
     "nom": "Julie La best",
@@ -42,3 +42,4 @@
     "boite": 1
   }],
 }
+export default bdd
