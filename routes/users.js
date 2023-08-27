@@ -14,9 +14,17 @@ router.get('/user', (req, res) => {
     res.json(bdd);
   });
 router.post('/post', (req, res) => {
-    let newData = {
-        "taken": true
+
+    try {    
+        let newData = {
+            "taken": true
+        }
+    bdd.livres[1].push(newData)
+    res.json('POST CA MARCHE');
+    } catch (e) {
+        res.json(e);
     }
+});
     bdd.livres[1].push(newData)
     res.json('POST CA MARCHE');
   });
