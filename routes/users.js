@@ -25,9 +25,6 @@ router.post('/post', (req, res) => {
         res.json(e);
     }
 });
-    bdd.livres[1].push(newData)
-    res.json('POST CA MARCHE');
-  });
 router
   .route("/:id")
   .get((req, res) => {
