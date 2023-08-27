@@ -10,6 +10,9 @@ router.get('/', (req, res) => {
 router.get('/user', (req, res) => {
     res.json(bdd.users[1].nom);
   });
+router.post('/post', (req, res) => {
+    res.send(bdd.users[1].nom);
+  });
 router
   .route("/:id")
   .get((req, res) => {
