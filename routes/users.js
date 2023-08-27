@@ -10,8 +10,15 @@ router.get('/', (req, res) => {
 router.get('/user', (req, res) => {
     res.json(bdd.users[1].nom);
   });
+  router.get('/livre', (req, res) => {
+    res.json(bdd);
+  });
 router.post('/post', (req, res) => {
-    res.send(bdd.users[1].nom);
+    let newData = {
+        "taken": true
+    }
+    bdd.livres[1].push(newData)
+    res.json('POST CA MARCHE');
   });
 router
   .route("/:id")
